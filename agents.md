@@ -6,6 +6,7 @@ This repository is the root of a static website for Oxford Capoeira Angola.
 - Keep the project flat: do not create a nested project folder or duplicate root directory.
 - Use standard static hosting conventions: `index.html`, separate CSS, and separate image assets.
 - Do not add a build step. The site should remain directly publishable as static files.
+- Even when instructions are in Spanish, keep `agents.md` files and core HTML/CSS names in English.
 - Prefer simple, maintainable HTML and CSS unless a future task clearly needs more.
 - This site will be developed with AI assistance, so keep changes easy to inspect and explain.
 
