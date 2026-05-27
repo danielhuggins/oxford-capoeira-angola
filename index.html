@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Oxford Capoeira Angola is a static website for Capoeira Angola classes, music, movement, and community in Oxford."
+      content="Oxford Capoeira Society offers Capoeira Angola classes for adults and children in Oxford."
     >
-    <title>Oxford Capoeira Angola</title>
+    <title>Oxford Capoeira Society</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Oxford Capoeira Angola home">
-        Oxford Capoeira Angola
+      <a class="brand" href="#top" aria-label="Oxford Capoeira Society home">
+        <img
+          class="brand-logo"
+          src="images/oxford-capoeira-society-logo.png"
+          alt=""
+          aria-hidden="true"
+        >
+        <span>Oxford Capoeira Society</span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#classes">Classes</a>
         <a href="#about">About</a>
+        <a href="#first-class">First class</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -25,40 +32,62 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Capoeira Angola in Oxford</p>
-          <h1 id="hero-title">Train movement, music, and community.</h1>
+          <p class="eyebrow">Learn Capoeira Angola in Oxford</p>
+          <h1 id="hero-title">Oxford Capoeira Society</h1>
           <p>
-            A starting point for the Oxford Capoeira Angola website. Class
-            details, events, and group information can be added here as the site
-            develops.
+            Movement, music, rhythm, and community for adults and children.
+            Join a welcoming class where beginners and experienced students
+            learn Capoeira Angola together.
           </p>
-          <a class="button" href="#classes">View class details</a>
+          <div class="hero-actions" aria-label="Main actions">
+            <a class="button" href="#first-class">Try your first class</a>
+            <a class="button button-secondary" href="#classes">View class times</a>
+          </div>
         </div>
-        <img
-          class="hero-image"
-          src="hero-capoeira.svg"
-          alt="Illustration of a berimbau, pandeiro, and two Capoeira Angola players"
-        >
+        <figure class="hero-mark">
+          <img
+            class="hero-image"
+            src="images/oxford-capoeira-society-logo.png"
+            alt="Oxford Capoeira Society logo with an Oxford skyline illustration"
+          >
+          <figcaption>Capoeira Angola classes in Oxford</figcaption>
+        </figure>
       </section>
 
       <section class="section section-accent" id="classes" aria-labelledby="classes-title">
         <div class="section-inner">
           <p class="eyebrow">Classes</p>
-          <h2 id="classes-title">Oxford class information</h2>
-          <div class="details-grid">
-            <article>
-              <h3>Schedule</h3>
-              <p>Class days, times, and location will be published here.</p>
+          <h2 id="classes-title">Class times and locations</h2>
+          <div class="class-options">
+            <article class="class-option">
+              <p class="class-type">Adult class</p>
+              <h3>Adults - Tuesdays</h3>
+              <p>
+                6:30pm to 8:30pm at Jericho Community Centre,
+                33a Canal Street, Oxford, OX2 6BQ.
+              </p>
+              <a class="class-link" href="#first-class">Try this class</a>
             </article>
-            <article>
-              <h3>What to expect</h3>
-              <p>Movement practice, music, rhythm, singing, and roda etiquette.</p>
+            <article class="class-option">
+              <p class="class-type">Adult class</p>
+              <h3>Adults - Thursdays</h3>
+              <p>
+                6:30pm to 8:30pm at New Moca, Oxford Community Center.
+              </p>
+              <a class="class-link" href="#first-class">Try this class</a>
             </article>
-            <article>
-              <h3>New students</h3>
-              <p>Beginner information and what to bring can be added here.</p>
+            <article class="class-option">
+              <p class="class-type">Children's class</p>
+              <h3>Children - Tuesdays</h3>
+              <p>
+                5:00pm to 6:00pm at West Oxford Community Center.
+              </p>
+              <a class="class-link" href="#first-class">Try this class</a>
             </article>
           </div>
+          <p class="class-note">
+            Classes are &pound;10 per session. No previous experience is needed.
+          </p>
         </div>
       </section>
 
@@ -69,9 +98,35 @@
             <h2 id="about-title">Rooted in Capoeira Angola tradition</h2>
           </div>
           <p>
-            This page is ready for a short description of the group, its lineage,
-            teachers, values, and links to wider Capoeira Angola resources.
+            Capoeira Angola brings together movement, music, rhythm, singing,
+            community, and cultural tradition. The group welcomes students,
+            professionals, local residents, and anyone curious to learn.
           </p>
+        </div>
+      </section>
+
+      <section class="section section-accent" id="first-class" aria-labelledby="first-class-title">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">First class</p>
+            <h2 id="first-class-title">Try your first class</h2>
+          </div>
+          <div>
+            <p>
+              Wear comfortable clothes such as sports trousers, a comfortable
+              T-shirt, and shoes you can move in. Bring a bottle of water.
+            </p>
+            <p>
+              All levels are accepted, from beginners to experienced students.
+              You do not need any previous capoeira experience.
+            </p>
+            <div class="cta-row" aria-label="First class actions">
+              <a class="button" href="https://www.instagram.com/oxfordcapoeirasociety/" target="_blank" rel="noopener noreferrer">
+                Message us on Instagram
+              </a>
+              <a class="button button-secondary" href="#classes">Choose a class</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -79,18 +134,37 @@
         <div class="section-inner split">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2 id="contact-title">Get in touch</h2>
+            <h2 id="contact-title">Ready to join a class?</h2>
           </div>
-          <p>
-            Add an email address, social link, or contact form provider when the
-            group is ready to receive enquiries through the website.
-          </p>
+          <div>
+            <p>
+              Send us a message on Instagram to ask a question, confirm the next
+              class, or arrange your first visit.
+            </p>
+            <p>
+              You can also send a WhatsApp message or text Professor Lobinho on
+              07411776771 to book a class.
+            </p>
+            <div class="cta-row">
+              <a
+                class="button"
+                href="https://www.instagram.com/oxfordcapoeirasociety/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Message us on Instagram
+              </a>
+              <a class="button button-secondary" href="tel:07411776771">
+                WhatsApp or text Professor Lobinho
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year">2026</span> Oxford Capoeira Angola</p>
+      <p>&copy; <span id="year">2026</span> Oxford Capoeira Society</p>
     </footer>
   </body>
 </html>
