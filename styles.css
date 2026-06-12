@@ -103,6 +103,21 @@ a {
   min-width: 0;
 }
 
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  background: #edf5f2;
+  color: var(--green);
+  border: 1px solid #c9ddd6;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .eyebrow {
   margin: 0 0 0.9rem;
   color: var(--red);
@@ -142,11 +157,36 @@ h3 {
   font-size: 1.08rem;
 }
 
-.hero-copy p:not(.eyebrow) {
+.hero-copy p:not(.eyebrow, .welcome-badge) {
   max-width: 38rem;
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   overflow-wrap: break-word;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  max-width: 42rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-highlights li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .hero-actions,
@@ -242,6 +282,13 @@ h3 {
 .section-inner {
   width: min(100%, 72rem);
   margin-inline: auto;
+}
+
+.section-intro {
+  max-width: 48rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
 }
 
 .details-grid,
@@ -418,9 +465,13 @@ h3 {
 
 .about-profile p:not(.eyebrow) {
   max-width: 43rem;
-  margin: 0;
+  margin-bottom: 1rem;
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.about-profile p:not(.eyebrow):last-child {
+  margin-bottom: 0;
 }
 
 .teacher-profile {
@@ -479,6 +530,50 @@ h3 {
   color: var(--muted);
 }
 
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 1.5rem;
+}
+
+.expect-grid article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  align-content: start;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.expect-grid article:nth-child(-n + 2) {
+  border-top-color: var(--gold);
+}
+
+.expect-grid h3,
+.expect-grid p {
+  grid-column: 2;
+}
+
+.expect-marker {
+  display: inline-grid;
+  grid-row: 1 / span 2;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: #edf5f2;
+  color: var(--green);
+  border: 1px solid #c9ddd6;
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.expect-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -502,6 +597,45 @@ h3 {
   color: var(--muted);
   font-weight: 900;
   text-align: center;
+}
+
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  background: #c9ddd6;
+  border: 1px solid #c9ddd6;
+  border-radius: 8px;
+}
+
+.contact-option {
+  display: grid;
+  gap: 0.3rem;
+  min-height: 7rem;
+  padding: 1.1rem;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact-option span {
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-option strong {
+  color: var(--green);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  overflow-wrap: anywhere;
+}
+
+.contact-option:hover,
+.contact-option:focus-visible {
+  background: #edf5f2;
 }
 
 .site-footer {
@@ -536,7 +670,9 @@ h3 {
   .about-profile,
   .teacher-profile,
   .events-grid,
+  .expect-grid,
   .gallery-grid,
+  .contact-options,
   .split {
     grid-template-columns: 1fr;
   }

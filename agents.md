@@ -1,6 +1,6 @@
-# Oxford Capoeira Angola Agents
+# Oxford Capoeira Society Agents
 
-This repository is the root of a static website for Oxford Capoeira Angola.
+This repository is the root of a static website for Oxford Capoeira Society.
 
 - Publish through GitHub Pages from the repository root.
 - Repository: `https://github.com/danielhuggins/oxford-capoeira-angola`.
