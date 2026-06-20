@@ -68,7 +68,6 @@ a {
 .brand-logo {
   width: clamp(8rem, 18vw, 12rem);
   height: auto;
-  background: #ffffff;
 }
 
 .site-nav {
@@ -231,11 +230,34 @@ h3 {
 }
 
 .hero-mark,
-.hero-photo-placeholder {
+.hero-photo-placeholder,
+.hero-photo {
   width: min(100%, 34rem);
   margin: 0;
   justify-self: center;
   text-align: center;
+}
+
+.hero-photo {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-photo figcaption {
+  padding: 0.85rem 1rem;
+  color: var(--green);
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 
 .hero-photo-placeholder {
@@ -268,6 +290,37 @@ h3 {
 
 .section {
   padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 4rem);
+}
+
+.community-photo {
+  padding: 0 clamp(1rem, 4vw, 4rem) clamp(3rem, 7vw, 6rem);
+}
+
+.community-photo figure,
+.gallery-photo {
+  margin: 0;
+}
+
+.community-photo figure {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+}
+
+.community-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  object-position: center;
+}
+
+.community-photo figcaption {
+  padding: 0.85rem 1rem;
+  color: var(--green);
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 
 .section-accent {
@@ -501,6 +554,25 @@ h3 {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
 }
 
+.expect-photo-strip {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.expect-photo-strip img {
+  width: 100%;
+  height: 100%;
+  min-height: clamp(11rem, 22vw, 17rem);
+  object-fit: cover;
+  background: var(--surface);
+}
+
 .events-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -513,9 +585,20 @@ h3 {
 }
 
 .event-card {
-  min-height: 13rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   background: var(--surface);
+}
+
+.event-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.event-card-copy {
+  padding: clamp(1.25rem, 3vw, 2rem);
 }
 
 .event-date {
@@ -527,6 +610,12 @@ h3 {
 }
 
 .event-card p:not(.event-date) {
+  color: var(--muted);
+}
+
+.event-note {
+  max-width: 48rem;
+  margin: 1.25rem 0 0;
   color: var(--muted);
 }
 
@@ -597,6 +686,39 @@ h3 {
   color: var(--muted);
   font-weight: 900;
   text-align: center;
+}
+
+.gallery-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 13rem;
+  aspect-ratio: 4 / 3;
+  background: var(--surface);
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-photo figcaption {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  max-width: calc(100% - 1.5rem);
+  padding: 0.35rem 0.55rem;
+  background: rgba(24, 32, 36, 0.78);
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.gallery-photo-large {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: 8 / 6;
 }
 
 .contact-options {
@@ -672,9 +794,16 @@ h3 {
   .events-grid,
   .expect-grid,
   .gallery-grid,
+  .expect-photo-strip,
   .contact-options,
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-photo-large {
+    grid-column: auto;
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .venue-images {
