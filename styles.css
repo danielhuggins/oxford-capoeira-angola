@@ -102,6 +102,10 @@ a {
   min-width: 0;
 }
 
+.hero-tail {
+  min-width: 0;
+}
+
 .welcome-badge {
   display: inline-flex;
   align-items: center;
@@ -248,7 +252,7 @@ h3 {
 
 .hero-photo img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
 }
@@ -665,6 +669,7 @@ h3 {
 
 .gallery-grid {
   display: grid;
+  grid-auto-flow: dense;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
@@ -723,23 +728,26 @@ h3 {
 
 .contact-options {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  margin-top: 1.25rem;
-  background: #c9ddd6;
-  border: 1px solid #c9ddd6;
-  border-radius: 8px;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 0;
 }
 
 .contact-option {
   display: grid;
-  gap: 0.3rem;
+  align-content: start;
+  gap: 0.4rem;
   min-height: 7rem;
   padding: 1.1rem;
   background: var(--surface);
   color: var(--ink);
+  border: 1px solid #c9ddd6;
+  border-radius: 8px;
   text-decoration: none;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
 }
 
 .contact-option span {
@@ -755,9 +763,60 @@ h3 {
   overflow-wrap: anywhere;
 }
 
+.contact-option small {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contact-option-primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: #ffffff;
+  box-shadow: var(--soft-shadow);
+}
+
+.contact-option-primary span,
+.contact-option-primary strong,
+.contact-option-primary small {
+  color: #ffffff;
+}
+
 .contact-option:hover,
 .contact-option:focus-visible {
   background: #edf5f2;
+  border-color: var(--green);
+  transform: translateY(-2px);
+}
+
+.contact-option-primary:hover,
+.contact-option-primary:focus-visible {
+  background: #0d5945;
+}
+
+.contact-prompts {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.contact-prompts li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.contact-prompts li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--gold);
+  border-radius: 50%;
+  content: "";
 }
 
 .site-footer {
@@ -780,6 +839,31 @@ h3 {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy .welcome-badge {
+    justify-self: start;
+    order: 1;
+  }
+
+  .hero-copy h1 {
+    order: 2;
+  }
+
+  .hero-copy > p {
+    order: 3;
+  }
+
+  .hero-photo {
+    order: 4;
+  }
+
+  .hero-tail {
+    order: 5;
   }
 
   .hero-mark {
@@ -838,11 +922,34 @@ h3 {
   }
 
   .hero {
-    padding-top: 2rem;
+    gap: 1rem;
+    padding-top: 1.5rem;
   }
 
-  .hero-copy p:not(.eyebrow) {
+  .hero-copy p:not(.eyebrow, .welcome-badge) {
     max-width: 32ch;
+    font-size: 1rem;
+  }
+
+  .welcome-badge {
+    min-height: 2rem;
+    margin-bottom: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .hero-highlights {
+    gap: 0.45rem;
+    margin-top: 1rem;
+  }
+
+  .hero-highlights li {
+    min-height: 2.1rem;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-photo img {
+    aspect-ratio: 4 / 3;
   }
 
   html {
@@ -850,7 +957,8 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.5rem, 14vw, 3.6rem);
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 11vw, 3rem);
   }
 
   .details-grid article {
