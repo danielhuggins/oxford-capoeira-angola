@@ -376,9 +376,22 @@ h3 {
   gap: 0.7rem;
 }
 
-.class-option h3,
+.class-group-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1rem clamp(1.25rem, 3vw, 2rem);
+  background: #f7f4ed;
+  color: var(--green);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+
+.class-option h4,
 .class-option p {
   margin-bottom: 0;
+}
+
+.class-option h4 {
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
 }
 
 .class-type {
@@ -386,6 +399,63 @@ h3 {
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.class-details {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0 0 0.3rem;
+}
+
+.class-details div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.class-details dt {
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.class-details dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.class-venue {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(8rem, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  margin-top: 0.15rem;
+  padding: 0.85rem;
+  background: #fbfaf6;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.class-venue-copy {
+  min-width: 0;
+}
+
+.class-venue-copy .eyebrow {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+}
+
+.class-venue-copy h5 {
+  margin: 0 0 0.3rem;
+  color: var(--green);
+  font-size: 1rem;
+}
+
+.class-venue-copy p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .class-actions {
@@ -488,6 +558,21 @@ h3 {
 .venue-images img:first-child {
   object-fit: contain;
   padding: 1rem;
+}
+
+.class-venue .venue-images {
+  grid-template-columns: minmax(4rem, 0.45fr) minmax(6rem, 1fr);
+  gap: 0.55rem;
+}
+
+.class-venue .venue-images img {
+  height: 6rem;
+  min-height: 0;
+  max-height: none;
+}
+
+.class-venue .venue-images img:first-child {
+  padding: 0.55rem;
 }
 
 .split {
@@ -896,6 +981,14 @@ h3 {
 
   .venue-images {
     grid-template-columns: 1fr;
+  }
+
+  .class-venue {
+    grid-template-columns: 1fr;
+  }
+
+  .class-venue .venue-images {
+    grid-template-columns: minmax(4rem, 0.45fr) minmax(6rem, 1fr);
   }
 }
 
