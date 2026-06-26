@@ -319,7 +319,7 @@ h3 {
 
 .community-photo img {
   width: 100%;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
 }
@@ -952,6 +952,10 @@ h3 {
   }
 
   .hero-photo img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .community-photo img {
     aspect-ratio: 4 / 3;
   }
 
