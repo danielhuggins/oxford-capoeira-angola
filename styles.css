@@ -363,6 +363,25 @@ h3 {
   background: var(--line);
 }
 
+.class-options {
+  display: block;
+}
+
+.class-group + .class-group {
+  border-top: 1px solid var(--line);
+}
+
+.class-group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.class-group-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .details-grid article,
 .class-option {
   min-height: 13rem;
@@ -377,7 +396,6 @@ h3 {
 }
 
 .class-group-title {
-  grid-column: 1 / -1;
   margin: 0;
   padding: 1rem clamp(1.25rem, 3vw, 2rem);
   background: #f7f4ed;
@@ -960,7 +978,6 @@ h3 {
   }
 
   .details-grid,
-  .class-options,
   .venue-preview,
   .about-profile,
   .teacher-profile,
@@ -970,6 +987,10 @@ h3 {
   .expect-photo-strip,
   .contact-options,
   .split {
+    grid-template-columns: 1fr;
+  }
+
+  .class-group-grid {
     grid-template-columns: 1fr;
   }
 
