@@ -83,6 +83,10 @@ a {
   text-decoration: none;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: var(--red);
@@ -915,9 +919,8 @@ h3 {
   }
 
   .site-nav {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
     width: 100%;
+    gap: 0.5rem 1rem;
     font-size: 0.85rem;
   }
 
