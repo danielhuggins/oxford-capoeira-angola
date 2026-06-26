@@ -493,17 +493,66 @@ h3 {
   color: var(--muted);
 }
 
-.class-note {
-  max-width: 48rem;
-  margin: 1.5rem auto 0;
-  padding: 1rem 1.25rem;
+.price-summary {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.45fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.5rem);
+  align-items: stretch;
+  margin-top: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
   background: #edf5f2;
-  color: var(--green);
   border: 1px solid #c9ddd6;
   border-radius: 8px;
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.price-summary-heading h3 {
+  margin-bottom: 0;
+  color: var(--green);
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: #c9ddd6;
+  border: 1px solid #c9ddd6;
+  border-radius: 8px;
+}
+
+.price-cards article {
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+  min-height: 9rem;
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.price-cards p {
+  margin: 0;
+  color: var(--red);
+  font-size: 0.75rem;
   font-weight: 900;
-  text-align: center;
+  text-transform: uppercase;
+}
+
+.price-cards strong {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1;
+}
+
+.price-cards span,
+.price-note {
+  color: var(--muted);
+}
+
+.price-note {
+  grid-column: 2;
+  margin: -0.45rem 0 0;
+  font-weight: 800;
 }
 
 .venue-preview {
@@ -952,6 +1001,7 @@ h3 {
 
   .details-grid,
   .class-options,
+  .price-summary,
   .venue-preview,
   .about-profile,
   .teacher-profile,
@@ -962,6 +1012,15 @@ h3 {
   .contact-options,
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .price-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .price-note {
+    grid-column: auto;
+    margin-top: 0;
   }
 
   .gallery-photo-large {
