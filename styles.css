@@ -632,6 +632,49 @@ h3 {
   margin-bottom: 0;
 }
 
+.first-class-guide > div:last-child > p {
+  max-width: 44rem;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.first-class-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.first-class-steps article {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+  min-height: 11rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: var(--surface);
+}
+
+.first-class-steps span {
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.first-class-steps h3 {
+  margin-bottom: 0;
+  color: var(--green);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.first-class-steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .about-profile {
   display: grid;
   grid-template-columns: minmax(14rem, 22rem) minmax(0, 1fr);
@@ -1015,6 +1058,10 @@ h3 {
   }
 
   .price-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .first-class-steps {
     grid-template-columns: 1fr;
   }
 
