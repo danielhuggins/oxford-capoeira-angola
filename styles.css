@@ -555,6 +555,35 @@ h3 {
   font-weight: 800;
 }
 
+.quick-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+}
+
+.quick-contact p {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 900;
+}
+
+.quick-contact .button {
+  margin-top: 0;
+}
+
+.quick-contact-subtle {
+  background: #f7f4ed;
+}
+
 .venue-preview {
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(18rem, 1fr);
@@ -1068,6 +1097,14 @@ h3 {
   .price-note {
     grid-column: auto;
     margin-top: 0;
+  }
+
+  .quick-contact {
+    align-items: stretch;
+  }
+
+  .quick-contact .button {
+    width: 100%;
   }
 
   .gallery-photo-large {
