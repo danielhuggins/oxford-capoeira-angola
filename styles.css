@@ -887,17 +887,12 @@ h3 {
 
 .gallery-grid {
   display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
   gap: 1px;
   overflow: hidden;
   background: var(--line);
   border: 1px solid var(--line);
   border-radius: 8px;
-}
-
-.gallery-grid-small {
-  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
 }
 
 .gallery-placeholder {
@@ -939,12 +934,6 @@ h3 {
   border-radius: 6px;
   font-size: 0.78rem;
   font-weight: 900;
-}
-
-.gallery-photo-large {
-  grid-column: span 2;
-  grid-row: span 2;
-  aspect-ratio: 8 / 6;
 }
 
 .contact-options {
@@ -1125,12 +1114,6 @@ h3 {
 
   .quick-contact .button {
     width: 100%;
-  }
-
-  .gallery-photo-large {
-    grid-column: auto;
-    grid-row: auto;
-    aspect-ratio: 4 / 3;
   }
 
   .venue-images {
