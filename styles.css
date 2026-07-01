@@ -856,11 +856,19 @@ h3 {
 .cultural-work {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
   align-items: start;
 }
 
-.cultural-work > div:first-child p:not(.eyebrow) {
+.cultural-work-header {
+  grid-column: 1 / -1;
+}
+
+.cultural-work-header h2 {
+  max-width: 58rem;
+}
+
+.cultural-work-copy p {
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.2rem);
 }
