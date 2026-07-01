@@ -781,6 +781,59 @@ h3 {
   margin-bottom: 0;
 }
 
+.section-values {
+  background: #f7f4ed;
+  border-block: 1px solid var(--line);
+}
+
+.values-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.values-layout > div:first-child p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.values-grid {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.values-grid article {
+  display: grid;
+  gap: 0.45rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: var(--surface);
+}
+
+.values-grid span {
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.values-grid h3,
+.values-grid p {
+  margin: 0;
+}
+
+.values-grid h3 {
+  color: var(--green);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.values-grid p {
+  color: var(--muted);
+}
+
 .teacher-profile {
   display: grid;
   grid-template-columns: minmax(14rem, 22rem) minmax(0, 1fr);
@@ -806,6 +859,51 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.cultural-work {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.cultural-work > div:first-child p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.impact-grid article {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+  min-height: 11rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: #f7f4ed;
+}
+
+.impact-grid h3,
+.impact-grid p {
+  margin: 0;
+}
+
+.impact-grid h3 {
+  color: var(--green);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.impact-grid p {
+  color: var(--muted);
 }
 
 .expect-photo-strip {
@@ -1165,7 +1263,10 @@ h3 {
   .location-grid,
   .venue-preview,
   .about-profile,
+  .values-layout,
   .teacher-profile,
+  .cultural-work,
+  .impact-grid,
   .events-grid,
   .expect-grid,
   .gallery-grid,
