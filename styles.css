@@ -866,12 +866,13 @@ h3 {
 }
 
 .global-network {
-  margin-top: 1.4rem;
+  align-self: start;
   padding: clamp(1rem, 2vw, 1.25rem);
   background: #f7f4ed;
   border: 1px solid var(--line);
   border-left: 4px solid var(--green);
   border-radius: 8px;
+  box-shadow: var(--soft-shadow);
 }
 
 .global-network h3 {
@@ -906,6 +907,7 @@ h3 {
 }
 
 .impact-grid {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
