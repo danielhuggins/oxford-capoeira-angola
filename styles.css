@@ -378,7 +378,7 @@ h3 {
 
 .class-option h4,
 .class-option p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .class-option h4 {
@@ -390,6 +390,10 @@ h3 {
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.class-option .class-type {
+  margin-bottom: -0.2rem;
 }
 
 .class-details {
