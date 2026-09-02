@@ -350,6 +350,42 @@ h3 {
   font-weight: 900;
 }
 
+.children-poster-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 0.7fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.children-poster-layout p:not(.eyebrow) {
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.poster-frame {
+  margin: 0;
+  padding: clamp(0.6rem, 2vw, 1rem);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+}
+
+.poster-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.poster-frame figcaption {
+  margin-top: 0.75rem;
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
 .section-accent {
   background: var(--surface);
   border-block: 1px solid var(--line);
@@ -1321,6 +1357,7 @@ h3 {
   .about-profile,
   .values-layout,
   .teacher-profile,
+  .children-poster-layout,
   .cultural-work,
   .impact-grid,
   .event-feature,
